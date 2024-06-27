@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 780px;
+    scroll-padding-top: 60px; /* Add padding to account for fixed nav */
+}
+
+body {
+    min-height: 55vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add some padding to the left and right */
+}
+
+.link-remover {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar .nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-bar .nav-links a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.nav-bar .nav-links a:hover {
+    background-color: rgb(26, 143, 201);
+    color: black;
+}
+
+#company {
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    font-weight: 200;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    perspective: 10px;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.sample {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container {
+    flex-shrink: 0;
+}
+
+.first_cont { /* Adjust the space between the image and text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sec_cont {
+    margin-left: 10px;
+    height: 330px;
+    width: 750px;
+}
+
+.image {
+    margin: 30px;
+    border-radius: 30px;
+    box-shadow: 6px 6px 4px black;
+}
+
+.services {
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.heading {
+    text-align: center;
+    background-color: gray;
+    color: white;
+}
+
+.one {
+    background: -webkit-linear-gradient(110deg, #0a48f3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #d1ccd5 70%, #5da9fa 70%);
+    background: -o-linear-gradient(110deg, #0a48f3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #d1ccd5 70%, #5da9fa 70%);
+    background: -moz-linear-gradient(110deg, #0a48f3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #d1ccd5 70%, #5da9fa 70%);
+    background: linear-gradient(110deg, #0a48f3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #d1ccd5 70%, #5da9fa 70%);
+}
+
+.two {
+    background-color: #5da9fa;
+}
+
+.three {
+    background-color: #0a48f3;
+}
+
+.test {
+    opacity: 0;
+    filter: blur(5px);
+    transition: opacity 1.3s ease-out, filter 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+#fir_pg_cont {
+    font-size: 40px;
+}
+
+.services .sub_head {/* First the "Our services" content is hidden */
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.services .sub_head.show { /* .show is added to show when the user scrolls */
+    opacity: 1;
+    transform: translateX(0) ;
+}
+
+#about_head{
+    font-size: 70px
+}
+#about{
+    width: 67%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+input[type="text"]{
+
+}
+
+/* To remove the arrows for increasing and decreasing in [type="number"] */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+.btn {
+    padding: 15px;
+    background-color: black;
+    margin-left: 500px;
+    margin-top: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: rgb(82, 82, 82) 3px solid;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+}
+
+/* Media query for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .test {
+        transition: none;
+    }
+}
