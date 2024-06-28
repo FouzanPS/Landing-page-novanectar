@@ -85,7 +85,12 @@ section {
 .sample {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Ensure that items within the section are stacked vertically */
+}
+
+.last {
+    display: flex;
+    flex-direction: column;
 }
 
 .image-container {
@@ -164,22 +169,83 @@ section {
     transform: translateX(0) ;
 }
 
-#about_head{
+#about_head {
     font-size: 70px
 }
-#about{
+
+#about {
     width: 67%;
     text-align: center;
     font-weight: 500;
     font-size: 25px;
 }
 
-.contact{
+.contact {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 800px;
 }
-input[type="text"]{
 
+.contact h1 {
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+label {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+input {
+    width: 110%;
+    height: fit-content;
+}
+
+input[type="number"], input[type="text"] {
+    width: 390px;
+    height: 30px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    border: 0px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#number {
+    margin-left: 20px;
+}
+
+textarea {
+    width: 800px;
+    height: 100px;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.btn2 {
+    padding: 15px;
+    background-color: rgb(68, 202, 19);
+    margin-top: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: rgb(1, 107, 1) 3px solid;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    width: 140px;
+}
+
+.btn2:hover {
+    transform: scale(1.08);
 }
 
 /* To remove the arrows for increasing and decreasing in [type="number"] */
@@ -189,7 +255,9 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-
+.ph {
+    display: flex;
+}
 
 .btn {
     padding: 15px;
@@ -210,9 +278,44 @@ input::-webkit-inner-spin-button {
     transform: scale(1.08);
 }
 
+.foot {
+    background-color: #fff;
+}
+
 /* Media query for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .test {
         transition: none;
     }
+}
+
+/* Footer styling */
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 156px;
+}
+
+.footer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-link:hover {
+    color: #1e90ff;
 }

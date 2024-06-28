@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Urooj Constructions</title>
 </head>
 <body>
     <div class="container">
         <div class="nav-bar">
             <div id="company"><a href="#" class="link-remover">Urooj Constructions</a></div>
             <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Services</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
+                <a href="#one">Home</a>
+                <a href="#two">Services</a>
+                <a href="#three">About Us</a>
+                <a href="#four">Contact Us</a>
             </div>
         </div>
-        <section class="one">
+        <section class="one" id="one">
             <div class="sample test">
                 <div class="image-container">
                     <img src="images/House.png" alt="house" height="600">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </section>
-        <section class="two">
+        <section class="two" id="two">
             <div class="sample test">
                 <div class="image-container">
                     <img class="image" src="https://img.freepik.com/free-photo/portrait-engineer-job-site-work-hours_23-2151589644.jpg?t=st=1719424132~exp=1719427732~hmac=2c7b10c83ca99b018211edfbbdda2dedc2adc438545bf892501304ad7d757b71&w=1800" alt="house" height="300">
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </section>
-        <section class="three">
+        <section class="three" id="three">
             <div class="sample test">
                 <div class="first_cont">
                     <h1 id="about_head">About Us</h1>
@@ -57,28 +57,42 @@
                 </div>
             </div>
         </section>
-        <section class="two">
-            <div class="sample test">
+        <section class="two last" id="four">
+            <div class="test">
                 <form action="https://formspree.io/f/xqazzgnz" method="POST">
                     <div class="contact">
+                        <h1>Contact Us</h1>
+                        <div class="ph">
+                            <label id="name">
+                                Your name:<br>
+                                <input type="text" name="text" placeholder="Enter your name">
+                            </label>
+                            <label id="number">
+                              Your phone number:<br>
+                              <input type="text" name="phnumber" placeholder="Enter your valid phone number" pattern="\d{10}" title="Please enter exactly 10 digits" maxlength="10" required>                            </label>
+                        </div>
                         <label>
-                            Your name:
-                            <input type="text" name="text" placeholder="Enter your name">
+                          Your message:<br>
+                          <textarea name="message" placeholder="Write your message here"></textarea>
                         </label>
-                        <label>
-                          Your email:
-                          <input type="email" name="email">
-                        </label>
-                        <label>
-                          Your message:
-                          <textarea name="message"></textarea>
-                        </label>
-                        <button type="submit">Send</button>
+                        <button type="submit" class="btn2">SEND</button>
                     </div>
                 </form>
             </div>
+            <footer class="footer">
+                <div class="footer-content">
+                    <h2>Follow Us</h2>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+            </footer>
         </section>
     </div>
+    
     <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
