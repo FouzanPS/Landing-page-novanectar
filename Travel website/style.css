@@ -1,0 +1,297 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: "Bodoni Moda SC", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #124e71;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+}
+.logo{
+    margin-left: 60px;
+    /* font-family: "Playwrite IT Moderna", cursive;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal; */
+}
+
+header nav {
+    margin-right: 50px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 23px;
+}
+
+header nav ul li a:hover {
+    background-color: rgb(26, 143, 201);
+    color: black;
+    border-radius: 5px;
+}
+
+#center{
+    margin-left: 240px;
+    margin-right: 0px
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your image path */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-family: "IM Fell Double Pica", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 100px;
+}
+
+.parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 70%;
+}
+
+.parallax-content h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.parallax-content p {
+    font-size: 30px;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+article p{
+    width: 640px;
+}
+
+.arrow-container{
+    display: flex;
+    align-items: center;
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: solid .5px rgb(132, 132, 132);
+    box-shadow: 1px 1px .5px black;
+    margin-right: 5px;
+    background-color: white;
+}
+
+.arrow:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.destination-image{
+    height: 400px;
+    width: 640px;
+}
+
+#destinations, #itineraries, #booking, #reviews, #contact {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.destination-list, .review-list, .itinerary-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.destination-list article, .itinerary-list article, .review-list article {
+    flex: 0 0 auto;
+    min-width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: white;
+    border-radius: 10px;
+}
+
+
+.review {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: white;
+    max-width: 600px;
+}
+
+.review img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.star-rating {
+    color: #ffc107;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 70%;
+}
+.frm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #124e71;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+footer .social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+@media (max-width: 800px) {
+    .destination-list article, .itinerary-list article, .review-list article {
+        flex: 1 1 100%;
+    }
+
+    .logo{
+        margin-left: 0px;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+    
+    header nav ul {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    li{
+        margin-right: 30px;
+    }
+
+    #center{
+        margin-left: 0px;
+        margin-bottom: 30px;
+    }
+
+    header nav ul div li a {
+        font-size: 16px;
+    }
+
+    .destination-image{
+        height: 200px;
+        width: 300px;
+    }
+    article p{
+        width: 300px;
+    }
+    
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+    }
+    
+    section {
+        padding: 60px 20px;
+    }
+}
